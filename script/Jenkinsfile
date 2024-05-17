@@ -9,6 +9,7 @@ agent any
         steps{ 
         sh 'mvn clean validate compile install test package'
         }
-   }
-  }
+    }
+    
+    }
    }
