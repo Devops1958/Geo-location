@@ -1,5 +1,6 @@
 pipeline{
-   agent any 
+agent any
+ 
    tools{
     maven 'M2_HOME'
    }
@@ -9,12 +10,18 @@ pipeline{
         sh 'mvn clean validate compile install test package'
         }
     }
-    stage("artifatory"){
+    stage('upload artifact'){
         steps{
-             sh 'curl -uadmin:password -T \
+            sh curl -uadmin:AP2iyxENzwzsgdmvabhCYgxNvqe -T \
             target/bio*.jar \
-            "http://100.25.130.174:8081/artifactory/Geolocation/Geosolution/bio_${BUILD_ID}.jar"'
+            
+             "http://100.26.228.124:8081/artifactory/Geolocation/geo/bio_${BUILD_ID}.jar"
+
+             
+            
+        }
+             
+            
         }
     }
    }
-}
