@@ -12,10 +12,10 @@ agent any
     }
     stage('upload artifact'){
         steps{
-            sh curl -uadmin:AP2iyxENzwzsgdmvabhCYgxNvqe -T \
+            sh 'curl -uadmin:AP2iyxENzwzsgdmvabhCYgxNvqe -T \
             target/bio*.jar \
             
-             "http://100.26.228.124:8081/artifactory/Geolocation/geo/bio_${BUILD_ID}.jar"
+             "http://100.26.228.124:8081/artifactory/Geolocation/geo/bio_${BUILD_ID}.jar"'
 
              
             
