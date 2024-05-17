@@ -15,7 +15,7 @@ agent any
         steps{
             sh 'curl -uadmin:AP2iyxENzwzsgdmvabhCYgxNvqe -T \
             target/bio*.jar \
-             "http://100.26.228.124:8081/artifactory/geomedical/geo/bio_${BUILD_ID}.jar"'
+             "http://100.26.228.124:8081/artifactory/geomedical/location/bio_${BUILD_ID}.jar"'
         }
     }
        
