@@ -1,16 +1,25 @@
-pipeline{
-agent any
- 
+  pipeline{
+   agent any 
    tools{
     maven 'M2_HOME'
    }
    stages{
+    stage('sonar-scan'){
+        steps{
+            withSonarQubeEnv('sonarQube'){
+        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devops1958_geo-location'
+            }
+          
+        
+        }
+    }
     stage("maven"){
         steps{ 
         sh 'mvn clean validate compile install test package'
         }
-
-    }
+    }     
+ 
+   
     stage('upload artifact'){
         steps{
             sh 'curl -uadmin:AP8SXsm1zBZcPa5n1gHtZxEC8rM -T \
