@@ -22,9 +22,9 @@
    
     stage('upload artifact'){
         steps{
-            sh 'curl -uadmin:AP8SXsm1zBZcPa5n1gHtZxEC8rM -T \
+            sh 'curl -uadmin:APAtrqGdCmQEVEvzSAvbZF6a9tv -T \
             target/bio*.jar \
-             "http://3.85.54.165:8081/artifactory/Geolocation/instance/bio_${BUILD_ID}.jar"'
+            "http://54.88.190.251:8081/artifactory/Geolocation/cloud_team/bio-${BUILD_ID}.jar"'
         }
     }
        
