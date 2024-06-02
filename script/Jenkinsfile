@@ -50,7 +50,7 @@
     }  
     stage(' push image'){
         steps{
-            sh 'docker push 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1-dev:latest'
+            sh 'docker push 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1:latest'
         }
     }
        
