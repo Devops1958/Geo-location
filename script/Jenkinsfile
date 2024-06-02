@@ -39,7 +39,7 @@
     stage('docker image build'){
         steps{
             sh 'docker build -t utc-app1:v.${BUILD-ID} .'
-           // sh 'docker build -t utc-app1:latest'
+            sh 'docker build -t utc-app1:latest'
         }
     }  
     stage('image tagging'){
@@ -53,7 +53,7 @@
     }  
     stage(' push image'){
         steps{
-           // sh 'docker push 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1:latest'
+            sh 'docker push 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1:latest'
             sh 'docker push 781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1:v.${BUILD-ID}'
         }
     }
