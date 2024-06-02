@@ -39,7 +39,7 @@
     stage('docker image build'){
         steps{
             sh 'docker build -t utc-app1 .'
-            sh 'docker build -t utc-app1:latest'
+            sh 'docker build -t utc-app1:latest .'
         }
     }  
     stage('image tagging'){
