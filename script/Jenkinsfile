@@ -43,8 +43,8 @@
     }  
     stage('image tagging'){
         steps{
-            sh 'docker tag utc-app1-dev:latest \
-            781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1-dev:v.'
+            sh 'docker tag utc-app1-dev:v.${BUILD-ID} \
+            781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1-dev:latest'
             sh 'docker tag utc-app1-dev:latest \
             781382313434.dkr.ecr.us-east-1.amazonaws.com/utc-app1-dev:v.${BUILD-ID}'
         }
