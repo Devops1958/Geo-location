@@ -17,6 +17,7 @@
         steps{ 
         sh 'mvn clean validate compile install test package'
         sh 'cat /etc/os-release'
+        sh 'lsblk'
         }
     }     
  
