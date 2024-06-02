@@ -36,6 +36,11 @@
             781382313434.dkr.ecr.us-east-1.amazonaws.com'
         }
     }
+    stage('docker image build'){
+        steps{
+            sh 'docker build -t utc-app1 .'
+        }
+    }    
        
     }
 }
